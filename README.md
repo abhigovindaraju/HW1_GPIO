@@ -1,2 +1,19 @@
-# HW1_GPIO
-HW1: c code timing analysis Part I |-  http://developer.mbed.org/platforms/mbed-LPC1768/ |-  skip reading: schematics and data sheets |-  write a C program to toggle a assigned GPIO output pin (lookup yours from Grades sheet) |- use objdump to lookup machine code |- use ARM data sheet to decode machine code |- write a page report (include hours that you spend in the homework.)
+Here are the steps I followed - 
+
+SO, for me PIN 13 means P 0.15 according to the PINOUT - 
+
+1. Select the pin as GPIO PINSEL0(0x4002C000)
+
+PINSEL0 = PINSEL0 & 0xcFFFFFFF 
+
+2. Set the direction as output FIO0DIR (0x2009C000)
+
+ FIO0DIR =  (FIO0DIR & 0x0 ) | 0x00008000 --> I am clearing it and then setting the bit I need to.
+
+3. Set the value for that pin HIGH  FIO0SET (0x2009C018)
+
+ FIO0SET =  (FIO0SET & 0x0 ) | 0x00008000
+
+4. Set the value for that pin LOW FIO0CLR (0x2009C01C)
+
+ FIO0CLR =  (FIO0CLR & 0x0 ) | 0x00008000
