@@ -1,3 +1,6 @@
+I spent around 15 hrs trying to figure out the registers I need to program for toggling the GPIO and also create a development environment 
+to run the code. 
+
 Here are the steps I followed - 
 
 SO, for me PIN 13 means P 0.15 according to the PINOUT - 
