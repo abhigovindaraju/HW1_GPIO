@@ -18,7 +18,7 @@ Disassembly of section .text:
   14:	603b      	str	r3, [r7, #0]
   16:	68fb      	ldr	r3, [r7, #12]
   18:	681b      	ldr	r3, [r3, #0]
-  1a:	f023 5240 	bic.w	r2, r3, #805306368	; 0x30000000
+  1a:	f023 4200 	bic.w	r2, r3, #2147483648	; 0x80000000
   1e:	68fb      	ldr	r3, [r7, #12]
   20:	601a      	str	r2, [r3, #0]
   22:	68bb      	ldr	r3, [r7, #8]
