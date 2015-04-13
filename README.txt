@@ -4,7 +4,7 @@ SO, for me PIN 13 means P 0.15 according to the PINOUT -
 
 1. Select the pin as GPIO PINSEL0(0x4002C000)
 
-PINSEL0 = PINSEL0 & 0xcFFFFFFF 
+PINSEL0 = PINSEL0 & 0x7FFFFFFF 
 
 2. Set the direction as output FIO0DIR (0x2009C000)
 
